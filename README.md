@@ -2,6 +2,8 @@
   <img src="https://github.com/bnavarroo/komodorius-list/blob/master/src/assets/images/logo-with-text.png" alt="Komodorius List" width="200px" />
 </p>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8ace8cef-f83c-4746-b9cc-d413114e2806/deploy-status)](https://app.netlify.com/sites/komodorius-list/deploys)
+
 <br />
 
 # 🚀 Sobre o Komodorius List

@@ -1,0 +1,27 @@
+@import './src/app/core/theme.scss';
+
+$padding-y: 20px;
+
+footer {
+  padding-top: $padding-y;
+  padding-bottom: $padding-y;
+  font-size: 14px;
+  gap: 8px 0;
+  border-top: 1px solid #EEE;
+
+  @media (min-width: $tablet-breakpoint) {
+    font-size: 16px;
+  }
+}
+
+.my-contatcs {
+  gap: 0 20px;
+
+  &-item {
+    gap: 2px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

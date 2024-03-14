@@ -1,0 +1,23 @@
+<footer class="container flex-center-y flex-between-tablet-x flex-column flex-row-tablet">
+  <div>Desenvolvido por <strong>Bruno Navarro</strong></div>
+  <div class="my-contatcs flex-center">
+    <a
+      [href]="socialMedia.github.url + socialMedia.github.user"
+      [target]="linkConfig.target"
+      [class]="linkConfig.classes"
+      [title]="socialMedia.github.title"
+    >
+      <app-github-icon [style]="socialMedia.github.iconStyle" />
+      <span>{{ socialMedia.github.user }}</span>
+    </a>
+    <a
+      [href]="socialMedia.linkedin.url + socialMedia.linkedin.user"
+      [target]="linkConfig.target"
+      [class]="linkConfig.classes"
+      [title]="socialMedia.linkedin.title"
+    >
+      <app-linkedin-icon [style]="socialMedia.linkedin.iconStyle" />
+      <span>{{ socialMedia.linkedin.user }}</span>
+    </a>
+  </div>
+</footer>

@@ -1,0 +1,13 @@
+$devices-to-hide: (mobile: $tablet-breakpoint, tablet: $desktop-breakpoint);
+
+.hide {
+  display: none;
+}
+
+@each $key, $value in $devices-to-hide {
+  .hide-from-#{$key} {
+    @media (max-width: $value) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+  font-size: map-get($theme, 'font-sizes', 'sm');
+
+  @media (min-width: $desktop-breakpoint) {
+    font-size: map-get($theme, 'font-sizes', 'md');
+  }
+
+  td, th {
+    padding: 8px .5em;
+    &:not(:last-child) {
+      border-right: 1px solid #DDD;
+    }
+  }
+
+  thead {
+    tr {
+      border-bottom: 1px solid #DDD;
+    }
+
+    td, th {
+      font-weight: 500;
+    }
+  }
+
+  thead {
+    th {
+      padding-bottom: 0;
+    }
+  }
+
+  &.table-striped {
+    tbody {
+      tr:nth-of-type(even) {
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+    }
+  }
+}

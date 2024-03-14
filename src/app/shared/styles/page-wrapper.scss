@@ -1,0 +1,20 @@
+@import './src/app/core/theme.scss';
+
+@mixin page-wrapper-styles() {
+  font-size: map-get($theme, 'font-sizes', 'md');
+
+  @media (min-width: $desktop-breakpoint) {
+    font-size: map-get($theme, 'font-sizes', 'lg');
+  }
+
+  .component-title {
+    display: block;
+    margin-bottom: 3em;
+
+    .link-button {
+      font-size: .75em;
+      min-width: 10em;
+      height: 3em;
+    }
+  }
+}

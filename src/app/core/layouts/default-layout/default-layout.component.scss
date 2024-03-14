@@ -1,0 +1,17 @@
+@import './src/app/core/theme.scss';
+
+$map-footer-height: map-get($theme, 'footer', 'height');
+
+.app-layout {
+  min-height: 100vh;
+
+  &-wrapper {
+    min-height: calc(100vh - map-get($map-footer-height, 'mobile'));
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @media (min-width: map-get($theme, 'breakpoints', map-get($theme, 'desktop-breakpoint'))) {
+      min-height: calc(100vh - map-get($map-footer-height, 'desktop'));
+    }
+  }
+}

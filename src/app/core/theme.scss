@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+
+$theme: (
+  breakpoints: (
+    xs: 360px,
+    sm: 568px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1200px,
+    xxl: 1320px
+  ),
+  desktop-breakpoint: 'lg',
+  tablet-breakpoint: 'md',
+  colors: (
+    text: #212529,
+    primary: #394550,
+    secondary: #FD7E00
+  ),
+  font-family: 'Montserrat',
+  font-sizes: (
+    base: 1rem, // aprox. 16px
+    xs: .75rem, // aprox. 12px
+    sm: .875rem, // aprox. 14px
+    md: 1rem, // aprox. 16px
+    lg: 1.25rem, // aprox. 20px
+    xl: 1.5rem, // aprox. 24px
+    xxl: 2rem // aprox. 32px
+  ),
+  border-radius: .4rem,
+  footer: (
+    height: (
+      desktop: 82px,
+      mobile: 102px
+    ),
+  ),
+  container: (
+    padding-x: 10px,
+    last-sized-breakpoint: 'lg'
+  )
+);
+
+$desktop-breakpoint: map-get($theme, 'breakpoints', map-get($theme, 'desktop-breakpoint'));
+$tablet-breakpoint: map-get($theme, 'breakpoints', map-get($theme, 'tablet-breakpoint'));

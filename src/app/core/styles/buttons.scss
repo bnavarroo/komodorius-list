@@ -1,0 +1,22 @@
+.btn {
+  padding: 8px;
+  border-radius: map-get($theme, 'border-radius');
+
+  &:disabled {
+    opacity: .5;
+  }
+};
+
+@each $key, $value in map-get($theme, 'colors') {
+  .btn-#{$key} {
+    @extend .btn;
+    background-color: $value;
+    color: #fff;
+  }
+
+  .btn-#{$key}-outline {
+    @extend .btn;
+    border: 1px solid $value;
+    color: $value;
+  }
+}

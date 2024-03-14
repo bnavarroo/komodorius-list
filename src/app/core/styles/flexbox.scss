@@ -1,0 +1,71 @@
+*[class*='flex-'] {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-nowrap { flex-wrap: nowrap; }
+
+/*  ====== ROW, COLUMN
+ - flex-[direction-value]
+ - flex-[direction-value]-tablet,
+ - flex-[direction-value]-desk */
+
+$direction-values: row, column;
+
+@each $direction in $direction-values {
+  .flex-#{$direction} {
+    flex-direction: $direction;
+  }
+}
+@each $direction in $direction-values {
+  .flex-#{$direction}-tablet {
+    @media (min-width: $tablet-breakpoint) {
+      flex-direction: $direction;
+    }
+  }
+
+  .flex-#{$direction}-desk {
+    @media (min-width: $desktop-breakpoint) {
+      flex-direction: $direction;
+    }
+  }
+}
+// ==========================================================
+
+/*  ====== CENTER, SPACE-BETWEEN
+ - flex-[justity-value]
+ - flex-[justity-value]-x, flex-[justity-value]-y
+ - flex-[justity-value]-tablet
+ - flex-[justity-value]-tablet-x, flex-[justity-value]-tablet-y
+ - flex-[justity-value]-desk
+ - flex-[justity-value]-desk-x, flex-[justity-value]-desk-y
+ */
+
+$justify-values: (center: center, between: space-between, end: flex-end);
+
+@mixin justify-and-align($value) {
+  align-items: $value;
+  justify-content: $value;
+  &-x { justify-content: $value; }
+  &-y { align-items: $value; }
+}
+
+@each $key, $value in $justify-values {
+  .flex-#{$key} {
+    @include justify-and-align($value);
+  }
+}
+@each $key, $value in $justify-values {
+  .flex-#{$key}-tablet {
+    @media (min-width: $tablet-breakpoint) {
+      @include justify-and-align($value);
+    }
+  }
+
+  .flex-#{$key}-desk {
+    @media (min-width: $desktop-breakpoint) {
+      @include justify-and-align($value);
+    }
+  }
+}
+// ==========================================================

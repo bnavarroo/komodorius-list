@@ -1,0 +1,18 @@
+$aligns: left, center, right;
+$colors: map-get($theme, 'colors');
+
+@each $align in $aligns {
+  .text-#{$align} {
+    text-align: $align;
+  }
+}
+
+@each $key, $value in $colors {
+  .text-#{$key} {
+    color: $value;
+  }
+}
+
+.text-bold {
+  font-weight: 600;
+}

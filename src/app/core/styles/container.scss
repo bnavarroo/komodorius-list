@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: map-get($theme, 'container', 'padding-x');
+  padding-right: map-get($theme, 'container', 'padding-x');
+
+  @media (min-width: map-get($theme, 'breakpoints', 'lg')) {
+    width: map-get($theme, 'breakpoints', 'lg');
+  }
+
+  @media (min-width: map-get($theme, 'breakpoints', 'xl')) {
+    width: map-get($theme, 'breakpoints', 'lg');
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: map-get($theme, 'breakpoints', 'xxl')) {
+    width: map-get($theme, 'breakpoints', 'xl');
+  }
+}

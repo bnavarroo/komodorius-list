@@ -1,0 +1,45 @@
+form {
+  display: grid;
+  gap: 1.5em;
+
+  label {
+    font-size: .75em;
+    font-weight: 400;
+  }
+
+  input {
+    font-size: 1em;
+    padding: 8px 4px;
+    border-bottom: 1px solid #DDD;
+
+    &:read-only{
+      color: #AAA;
+      background-color: #fafafa;
+    }
+
+    &.ng-touched.ng-invalid {
+      border-bottom: 1px solid red;
+    }
+  }
+
+  .form-line {
+    display: grid;
+    gap: 1em;
+
+    &.one-column-mobile {
+      @media (max-width: $tablet-breakpoint) {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &-inline {
+      flex-direction: row;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import './src/app/core/theme.scss';
+
+.title-page {
+  font-size: map-get($theme, 'font-sizes', 'md');
+  flex-wrap: nowrap;
+  gap: 1.5em;
+
+  @media (min-width: $desktop-breakpoint) {
+    font-size: map-get($theme, 'font-sizes', 'lg');
+  }
+
+  h1 {
+    border-bottom: 1px dotted;
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 2em;
+    width: 100%;
+  }
+}

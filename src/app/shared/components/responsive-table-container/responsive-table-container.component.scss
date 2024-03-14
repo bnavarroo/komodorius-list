@@ -1,0 +1,26 @@
+@import './src/app/core/theme.scss';
+
+$container-padding-x: map-get($theme, 'container', 'padding-x');
+$last-sized-breakpoint: map-get($theme, 'container', 'last-sized-breakpoint');
+
+.responsive-table {
+  &-container {
+    width: calc(100vw - $container-padding-x - $container-padding-x);
+    overflow-x: auto;
+
+    @media (min-width: map-get($theme, 'breakpoints', $last-sized-breakpoint)) {
+      width: 100%;
+    }
+  }
+
+  &-content {
+    min-width: $desktop-breakpoint;
+    padding: 12px 10px 20px;
+    border: 1px solid map-get($theme, 'colors', 'primary');
+    border-radius: 4px;
+
+    @media (min-width: map-get($theme, 'breakpoints', $last-sized-breakpoint)) {
+      border-bottom-width: 5px;
+    }
+  }
+}

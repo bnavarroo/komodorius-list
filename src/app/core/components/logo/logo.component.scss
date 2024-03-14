@@ -1,0 +1,8 @@
+@import './src/app/core/theme.scss';
+
+.logo {
+  width: 260px;
+  @media (min-width: $desktop-breakpoint) {
+    width: auto;
+  }
+}

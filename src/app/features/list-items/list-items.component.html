@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <a routerLink="/minhas-listas" class="back-link" title="voltar para listas">
+    <fa-icon [icon]="['fas', 'arrow-left']" size="1x" />
+    <b>voltar para listas</b>
+  </a>
+  <app-title-page title="Itens da Lista" class="component-title">
+    <a class="btn-secondary text-bold text-center flex-center link-button" routerLink="novo-item" title="Criar Nova Lista">
+      Adicionar Item
+    </a>
+  </app-title-page>
+  <app-parent-list-info [parentList]="parentList" />
+  <app-list-items-table [data]="data" (deleteItemEvent)="deleteItem($event)"/>
+</div>

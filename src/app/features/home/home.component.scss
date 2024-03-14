@@ -1,0 +1,21 @@
+@import './src/app/core/theme.scss';
+
+.wrapper {
+  font-size: map-get($theme, 'font-sizes', 'md');
+
+  @media (min-width: $desktop-breakpoint) {
+    font-size: map-get($theme, 'font-sizes', 'lg');
+  }
+
+  .links {
+    &-wrapper {
+      gap: .75em;
+      margin-top: .75em;
+    }
+
+    &-item {
+      min-width: 250px;
+      height: 3em;
+    }
+  }
+}

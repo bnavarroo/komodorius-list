@@ -1,0 +1,25 @@
+@import './src/app/core/theme.scss';
+@import './src/app/shared/styles/page-wrapper.scss';
+
+.wrapper {
+  @include page-wrapper-styles();
+
+  form {
+    .form-line {
+      grid-template-columns: 1fr 1fr;
+
+      &.first-line {
+        grid-template-columns: minmax(100px, 100px) 1fr minmax(200px, 200px);
+      }
+    }
+
+    .buttons-line {
+      gap: 12px;
+
+      .action-button {
+        height: 2.5em;
+        min-width: 9em;
+      }
+    }
+  }
+}

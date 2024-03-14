@@ -1,0 +1,31 @@
+@import './src/app/core/theme.scss';
+
+.wrapper {
+  margin-top: 20px;
+
+  table {
+    .column-id {
+      width: 80px;
+    }
+
+    .column-name {
+      width: 40%;
+    }
+
+    .column-actions {
+      gap: 16px;
+
+      .action-element {
+        &-icon {
+          &:hover {
+            color: map-get($theme, 'colors', 'secondary') !important;
+          }
+        }
+      }
+    }
+
+    .empty-list {
+      padding-top: 40px;
+    }
+  }
+}

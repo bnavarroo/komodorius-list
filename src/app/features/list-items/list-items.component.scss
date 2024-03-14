@@ -1,0 +1,24 @@
+@import './src/app/core/theme.scss';
+@import './src/app/shared/styles/page-wrapper.scss';
+
+$content-item-gap: 100px;
+
+.wrapper {
+  @include page-wrapper-styles();
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: .75em;
+    padding-bottom: 1em;
+    gap: 8px;
+
+    &:hover {
+      color: map-get($theme, 'colors', 'secondary');
+    }
+  }
+
+  .component-title {
+    margin-bottom: 1em;
+  }
+}

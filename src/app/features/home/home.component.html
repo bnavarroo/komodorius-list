@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <h1 class="text-center">Crie listas de maneira rápida e prática para facilitar o seu dia a dia!</h1>
+  <div class="flex-center links-wrapper">
+    <a
+      *ngFor="let item of links"
+      [routerLink]="item.link"
+      [class]="item.classes"
+      [title]="item.text">
+      <b>{{ item.text }}</b>
+    </a>
+  </div>
+</div>

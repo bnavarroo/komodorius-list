@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <app-title-page [title]="titlePage" class="component-title" />
+  <form [formGroup]="pageForm" class="">
+    <div class="form-line first-line">
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" id="id" formControlName="id" readonly>
+      </div>
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" id="name" formControlName="name">
+      </div>
+    </div>
+    <div class="form-line one-column-mobile">
+      <div class="form-group">
+        <label for="createdAt">Criada em</label>
+        <input type="text" createdAt="createdAt" formControlName="createdAt" readonly>
+      </div>
+      <div class="form-group">
+        <label for="updatedAt">Atualizada em</label>
+        <input type="text" id="updatedAt" formControlName="updatedAt" readonly>
+      </div>
+    </div>
+    <div class="flex-center buttons-line">
+      <a
+        class="btn-primary-outline flex-center text-center text-bold action-button"
+        routerLink="/minhas-listas"
+        [title]="getCancelActionText()"
+      >
+        {{ getCancelActionText() }}
+      </a>
+      <button
+        type="submit"
+        class="btn-secondary text-center text-bold action-button"
+        [disabled]="checkIsDisabledControl(pageForm)"
+        (click)="submitForm()"
+      >
+        Salvar
+      </button>
+    </div>
+  </form>
+</div>

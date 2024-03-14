@@ -1,0 +1,11 @@
+<div class="flex-center-y wrapper" [class.hide]="!parentList">
+  <div>
+    <b>Lista: </b>
+    <span># {{ parentList?.id }} - {{ parentList?.name }}</span>
+  </div>
+  <div class="hide-from-mobile">|</div>
+  <div class="hide-from-mobile">
+    <b>Criada em: </b>
+    <span>{{ parentList?.createdAt }}</span>
+  </div>
+</div>

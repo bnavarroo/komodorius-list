@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <app-title-page title="Minhas Listas" class="component-title">
+    <a
+      class="btn-secondary text-bold text-center flex-center link-button"
+      routerLink="nova-lista"
+      title="Criar Nova Lista"
+    >
+      Criar Lista
+    </a>
+  </app-title-page>
+  <app-lists-table [data]="data" (deleteItemEvent)="handleDeleteItem($event)"/>
+</div>

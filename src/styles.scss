@@ -1,0 +1,15 @@
+@import './app/core/theme';
+@import './app/core/styles/reset.scss';
+@import './app/core/styles/container.scss';
+@import './app/core/styles/text.scss';
+@import './app/core/styles/flexbox.scss';
+@import './app/core/styles/tables.scss';
+@import './app/core/styles/buttons.scss';
+@import './app/core/styles/forms.scss';
+@import './app/core/styles/visibility.scss';
+
+body {
+  font-family: map-get($theme, 'font-family'), sans-serif;
+  font-size: map-get($theme, 'font-sizes', 'base');
+  color: map-get($theme, 'colors', 'text');
+}

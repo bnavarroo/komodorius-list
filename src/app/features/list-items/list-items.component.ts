@@ -38,6 +38,7 @@ export class ListItemsComponent extends CrudController<ListItemEntity> implement
       isChecked: !listItem?.isChecked,
     };
 
-    this.updateItem(updatedItem);
+    this._service.update(updatedItem);
+    this.getItem();
   }
 }

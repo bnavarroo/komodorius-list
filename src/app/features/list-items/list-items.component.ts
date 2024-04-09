@@ -31,4 +31,13 @@ export class ListItemsComponent extends CrudController<ListItemEntity> implement
     const listDataResponse = this._service.getParentList();
     this.parentList = listDataResponse?.result?.[0];
   }
+
+  checkItem(listItem: ListItemEntity) {
+    const updatedItem = {
+      ...listItem,
+      isChecked: !listItem?.isChecked,
+    };
+
+    this.updateItem(updatedItem);
+  }
 }

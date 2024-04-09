@@ -11,6 +11,7 @@ import { ITableSettings } from '@shared/types/table-settings.types';
 export class ListItemsTableComponent {
   @Input() data: Array<ListItemEntity> = [];
   @Output() deleteItemEvent: EventEmitter<number> = new EventEmitter();
+  @Output() checkeItemEvent: EventEmitter<ListItemEntity> = new EventEmitter();
 
   readonly tableSettings: ITableSettings = {
     columns: [
@@ -30,5 +31,9 @@ export class ListItemsTableComponent {
 
   handleDeleteEvent(value: number) {
     this.deleteItemEvent.emit(value);
+  }
+
+  handleCheckEvent(value: ListItemEntity) {
+    this.checkeItemEvent.emit(value);
   }
 }

@@ -4,6 +4,17 @@
   margin-top: 20px;
 
   table {
+    .column-isChecked {
+      width: 60px;
+
+      input[type="checkbox"] {
+        appearance: auto;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+    }
+
     .column-id {
       width: 80px;
     }
@@ -26,6 +37,10 @@
 
     .empty-list {
       padding-top: 40px;
+    }
+
+    td.is-checked{
+      text-decoration: line-through;
     }
   }
 }

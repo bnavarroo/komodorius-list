@@ -5,7 +5,7 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { ListItemsRoutingModule } from './list-items-routing.module';
 
 import { faPenToSquare, faTrashCan } from '@fortawesome/free-regular-svg-icons';
-import { faUpRightFromSquare, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faUpRightFromSquare, faArrowLeft, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 import { DisplayValuePipe } from '@shared/pipes/display-value/display-value.pipe';
 
@@ -28,6 +28,6 @@ import { ListItemsTableComponent } from './components/list-items-table/list-item
 })
 export class ListsItemModule {
   constructor(library: FaIconLibrary) {
-    library.addIcons(faPenToSquare, faTrashCan, faUpRightFromSquare, faArrowLeft);
+    library.addIcons(faPenToSquare, faTrashCan, faUpRightFromSquare, faArrowLeft, faCheck);
   }
 }

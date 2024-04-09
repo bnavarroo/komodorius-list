@@ -9,5 +9,5 @@
     </a>
   </app-title-page>
   <app-parent-list-info [parentList]="parentList" />
-  <app-list-items-table [data]="data" (deleteItemEvent)="deleteItem($event)"/>
+  <app-list-items-table [data]="data" (deleteItemEvent)="deleteItem($event)" (checkeItemEvent)="checkItem($event)"/>
 </div>

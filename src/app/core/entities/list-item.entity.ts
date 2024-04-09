@@ -5,4 +5,5 @@ export interface ListItemEntity extends Record<string, unknown> {
   quantity?: number;
   createdAt?: string;
   updatedAt?: string;
+  isChecked?: boolean;
 }

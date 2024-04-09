@@ -3,6 +3,9 @@
     <table class="table-striped">
       <thead>
         <tr>
+          <th class="text-center column-isChecked">
+            <fa-icon [icon]="['fas', 'check']" [class]="tableSettings.actions?.styles?.iconClass" />
+          </th>
           <th *ngFor="let setting of tableSettings.columns" [class]="setting.classes ?? ''">
             {{ setting.title }}
           </th>
@@ -15,7 +18,10 @@
         </tr>
         <ng-template #columnLines>
           <tr *ngFor="let item of data">
-            <td *ngFor="let setting of tableSettings.columns" [class]="setting.classes ?? ''">
+            <td class="flex-center column-isChecked">
+              <input type="checkbox" name="isChecked" [checked]="item.isChecked" (change)="handleCheckEvent(item)" />
+            </td>
+            <td *ngFor="let setting of tableSettings.columns" [class]="setting.classes ?? ''" [class.is-checked]="item.isChecked">
               {{ item?.[setting.id] | displayValue:'-' }}
             </td>
             <td class="text-center flex-center column-actions">

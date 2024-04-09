@@ -63,7 +63,16 @@ export class ListItemsService implements ICrudModel<ListItemEntity> {
   };
 
   delete(id: number): TReponseData<Array<ListItemEntity>> {
-    return this._crudService.delete(id, this._storageConfig);
+    const response = this._crudService.delete(id, this._storageConfig);
+    if(response.success && response?.result) {
+      const result = response?.result?.filter(listItem => listItem?.listId === this?.listId);
+      return {
+        ...response,
+        result,
+      };
+    }
+
+    return response;
   };
 
   getParentList(listId?: number): TReponseData<Array<ListEntity>> {

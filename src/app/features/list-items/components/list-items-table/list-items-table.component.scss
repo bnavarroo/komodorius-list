@@ -24,7 +24,11 @@
     }
 
     .column-actions {
-      gap: 16px;
+      width: 110px;
+
+      .td-content {
+        gap: 16px;
+      }
 
       .action-element {
         &-icon {

@@ -2,10 +2,10 @@
   <table class="table-striped">
     <thead>
       <tr>
+        <th class="text-center">{{ tableSettings.actions?.title }}</th>
         <th *ngFor="let setting of tableSettings.columns" [class]="setting.classes ?? ''">
           {{ setting.title }}
         </th>
-        <th class="text-center">{{ tableSettings.actions?.title }}</th>
       </tr>
     </thead>
     <tbody>
@@ -14,9 +14,6 @@
       </tr>
       <ng-template #columnLines>
         <tr *ngFor="let item of data">
-          <td *ngFor="let setting of tableSettings.columns" [class]="setting.classes ?? ''">
-            {{ item?.[setting.id] | displayValue:'-' }}
-          </td>
           <td class="text-center flex-center column-actions">
             <a routerLink="{{ item.id }}" title="Editar" [class]="tableSettings.actions?.styles?.actionClass">
               <fa-icon [icon]="['far', 'pen-to-square']" [size]="tableSettings.actions?.styles?.sizeIcon" [class]="tableSettings.actions?.styles?.iconClass" />
@@ -27,6 +24,9 @@
             <a routerLink="{{ item.id }}/itens" title="Ver Itens" [class]="tableSettings.actions?.styles?.actionClass">
               <fa-icon icon="up-right-from-square" [size]="tableSettings.actions?.styles?.sizeIcon" [class]="tableSettings.actions?.styles?.iconClass" />
             </a>
+          </td>
+          <td *ngFor="let setting of tableSettings.columns" [class]="setting.classes ?? ''">
+            {{ item?.[setting.id] | displayValue:'-' }}
           </td>
         </tr>
       </ng-template>
